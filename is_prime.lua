@@ -3,7 +3,7 @@ function is_prime(num)
     return false
   end
 
-  local sqrt = math.sqrt(num)
+local sqrt = math.sqrt(num)
 
   local divisor = 2
   while num % divisor ~= 0 and divisor < sqrt do
@@ -11,6 +11,15 @@ function is_prime(num)
   end
 
   return divisor > sqrt
+
+  -- Solution by devstral llm
+  -- for divisor = 2, math.floor(math.sqrt(num)) do
+  --   if num % divisor == 0 then
+  --     return false
+  --   end
+  -- end
+
+  -- return true
 end
 
 print("is_prime(1):", is_prime(1))
