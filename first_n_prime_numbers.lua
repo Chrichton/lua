@@ -1,3 +1,7 @@
+function ends_in_3(num)
+  return string.sub(num, -1) == "3"
+end
+
 function is_prime(num)
   if num <= 1 then
     return false
@@ -14,7 +18,7 @@ function is_prime(num)
 end
 
 function find_next_prime_number(number)
-  while not is_prime(number) do
+  while not is_prime(number) or not ends_in_3(number) do
     number = number + 1
   end
 
