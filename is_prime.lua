@@ -1,4 +1,8 @@
 function is_prime(num)
+  if num <= 1 then
+    return false
+  end
+
   local sqrt = math.sqrt(num)
 
   local divisor = 2
@@ -9,5 +13,6 @@ function is_prime(num)
   return divisor > sqrt
 end
 
+print("is_prime(1):", is_prime(1))
 print("is_prime(100):", is_prime(100))
 print("is_prime(17):", is_prime(17))
