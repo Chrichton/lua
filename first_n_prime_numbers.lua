@@ -26,12 +26,12 @@ function find_next_prime_number(number)
 end
 
 function first_n_prime_numbers(n)
-  local number = 2
+  local number = 3
 
   for count = 1, n do
     local prime = find_next_prime_number(number)
     print("prime:", prime)
-    number = prime + 1
+    number = prime + 10
   end
 end
 
