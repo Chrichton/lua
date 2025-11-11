@@ -1,14 +1,15 @@
 function add(previous, next)
-  print(previous + next)
   return previous + next
 end
 
 function reduce(max, init, f)
-  local previous = init
+  local acc = init
 
   for i = init + 1, max do
-    previous = add(previous, i)
-  end 
+    acc = add(acc, i)
+  end
+
+  return acc
 end
 
 
